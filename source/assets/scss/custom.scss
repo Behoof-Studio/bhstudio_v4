@@ -1,11 +1,24 @@
-@import "./typography.scss";
-@import "./header.scss";
 // 1. Your custom variables and variable overwrites.
-$global-font-family: 'Inter', sans-serif;
-$global-small-font-size: 0.9rem;
-$global-color: #2d2d2d;
-$global-muted-color:#2d2d2d;
-$base-link-hover-color: lightgray;
+// https://github.com/uikit/uikit/blob/develop/src/scss/components/variables.scss
+
+// Typography
+$global-font-family: "Inter", sans-serif;
+$global-font-size: 15px;
+// $global-small-font-size: 0.7rem;
+
+// Colors
+$global-color: #969696 !default;
+$global-emphasis-color: #333 !default;
+$global-muted-color: #2d2d2d !default;
+
+$global-link-color: #1e87f0 !default;
+$global-link-hover-color: #0f6ecd !default;
+
+$global-inverse-color: #fff !default;
+
+// Navbar
+
+$navbar-nav-item-height: 50px;
 
 // 2. Import default variables and available mixins.
 // @import "../../node_modules/uikit/src/scss/variables-theme.scss";
@@ -14,10 +27,15 @@ $base-link-hover-color: lightgray;
 // 3. Import only core styles.
 @import "../../node_modules/uikit/src/scss/variables.scss";
 @import "../../node_modules/uikit/src/scss/mixins.scss";
-@import "../../node_modules/uikit/src/scss/uikit.scss";
 
 // 4. Your custom mixin overwrites.
-@mixin hook-card() { color: #000; }
+@mixin hook-card() {
+  color: #000;
+}
 
 // 5. Import UIkit.
-@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+@import "../../node_modules/uikit/src/scss/uikit.scss";
+// @import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+@import "./typography.scss";
+@import "./header.scss";
