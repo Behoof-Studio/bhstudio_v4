@@ -1,0 +1,24 @@
+.button--cta {
+    letter-spacing: 1px;
+    color: rgba(185, 125, 0, 1);
+    border: 0px solid rgba(35, 157, 219, 0);
+    background-color: rgba(253, 237, 204, 1);
+    border-radius: 5px;
+    padding: 15px 25px 15px 25px;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.6;
+    transition-duration: 0.50s;
+    transition-property: color, box-shadow, background, border-color;
+    max-width: fit-content;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(253, 224, 165, 0.12), 0px 10px 20px rgba(232, 201, 136, 0.18);
+    svg {
+        margin-left: 10px;
+    }
+}
+
+.button--cta:hover {
+    color: rgba(143, 98, 0, 1);
+    background-color: rgba(251, 221, 162, 0.8);
+}
