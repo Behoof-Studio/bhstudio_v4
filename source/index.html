@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon Links START -->
+
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
@@ -46,24 +47,67 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+
     <!-- Favicon Links END -->
 
     <title>⚡️Behoof Studio V4</title>
     <link rel="stylesheet" href="assets/dist/styles.css" />
   </head>
   <body>
-    <div class="uk-container">
-      <div class="uk-card uk-card-body uk-card-primary">
-        <h3 class="uk-card-title">Example headline</h3>
+    
+    <!-- Header Section START -->
 
-        <button
-          class="uk-button uk-button-default"
-          uk-tooltip="title: Hello World"
-        >
-          Hover
-        </button>
-      </div>
+    <div class="uk-section uk-section-default uk-section-xsmall">
+        <div class="uk-container">
+            <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="/"><img data-src="/assets/images/bhstudio_logo_color_vector.svg" width="220" height="70" alt="Behoof Studio Logo" uk-img></a>
+                </div>
+                <div class="uk-navbar-right">
+                    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+
+                        <!-- Desktop Navigation START -->
+
+                        <div class="uk-navbar-right uk-visible@m">
+                            <ul class="uk-navbar-nav">
+                                <li class="uk-active"><a href="/">About</a></li>
+                                <li><a href="/">Portfolio</a></li>
+                                <li><a href="/">Services</a></li>
+                                <li><a class="uk-button uk-button-default" href=""><span class="uk-margin-small-right" uk-icon="sign-in"></span>Customer Login</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Desktop Navigation END -->
+
+                        <!-- Mobile Navigation Toggle START -->
+
+                        <a href="#" class="uk-icon-link uk-hidden@m" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #offcanvas-overlay"></a>
+                        
+                        <!-- Mobile Navigation Toggle END -->
+
+                        <!-- Offcanvas START -->
+
+                        <div id="offcanvas-overlay" uk-offcanvas="overlay: true; mode: push">
+                            <div class="uk-offcanvas-bar">
+                        
+                                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                        
+                        
+                                <h3>Title</h3>
+                        
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                            </div>
+                        </div>
+
+                        <!-- Offcanvas END -->
+
+                    </nav>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Header Section END -->
 
     <script src="assets/dist/index.js"></script>
   </body>
