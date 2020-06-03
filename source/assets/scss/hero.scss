@@ -5,13 +5,16 @@
     letter-spacing: -1.5px;
 }
 
+@media (max-width: 640px) { 
+    .hero__title {
+        font-size: 40px;
+        line-height: 1.1em;
+    }
+ }
+
 .hero__subtitle {
     font-size: 17px;
     color: #787878;
     margin-bottom: 40px;
 }
-
-// .hero__container {
-//     flex: 1 1 auto;
-// }
 
