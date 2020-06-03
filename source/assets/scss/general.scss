@@ -22,3 +22,37 @@
     color: rgba(143, 98, 0, 1);
     background-color: rgba(251, 221, 162, 0.8);
 }
+
+.posts-grid__card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 15px 25px -4px rgba(30, 30, 60, 0.1);
+    transition: all .3s linear;
+    &:hover {
+        box-shadow: 0px 5px 10px -5px rgba(30,30,60,0.1);
+    }
+}
+
+.card__title {
+    letter-spacing: 0.5;
+    font-weight: 900;
+}
+
+.card__excerpt {
+    color: #2d2d2d;
+}
+
+.card__badge {
+    text-transform: uppercase;
+    margin-right: 8px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.1), 0px 2px 6px rgba(253,224,165,0.12), 0px 10px 20px rgba(232,201,136,0.18);
+    &--green {
+        background: #d8fbe0;
+        color: #147132;
+        box-shadow: 0px 0px 1px rgba(0,0,0,0.1), 0px 2px 6px rgba(216,251,224,0.5), 0px 10px 20px rgba(216,251,224,0.3);
+        &:hover {
+            color: #147132;
+        }
+    }
+}

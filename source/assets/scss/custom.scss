@@ -10,15 +10,24 @@ $global-font-size: 15px;
 $global-color: #969696 !default;
 $global-emphasis-color: #333 !default;
 $global-muted-color: #2d2d2d !default;
-
 $global-link-color: #1e87f0 !default;
 $global-link-hover-color: #0f6ecd !default;
-
 $global-inverse-color: #fff !default;
 
 // Navbar
 
 $navbar-nav-item-height: 50px;
+
+// Badge
+
+$badge-size: auto;
+$badge-padding-vertical: 5px;
+$badge-padding-horizontal: 15px;
+$badge-border-radius: 500px !default;
+$badge-background: #fdedcc;
+$badge-color: #b97d00;
+$badge-font-size: 12px;
+$badge-hover-color: #b97d00;
 
 // 2. Import default variables and available mixins.
 // @import "../../node_modules/uikit/src/scss/variables-theme.scss";
