@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon Links START -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Favicon Links END -->
+    <title>⚡️Behoof Studio V4</title>
+    <link rel="stylesheet" href="assets/dist/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section START -->
+    <div
+      class="header__section uk-section uk-section-default uk-section-xsmall"
+    >
+      <div class="uk-container">
+        <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/"
+              ><img
+                data-src="/assets/images/bhstudio_logo_color_vector.svg"
+                width="220"
+                height="70"
+                alt="Behoof Studio Logo"
+                uk-img
+            /></a>
+          </div>
+          <div class="uk-navbar-right">
+            <nav
+              class="uk-navbar-container uk-navbar-transparent header-nav__container"
+              uk-navbar
+            >
+              <!-- Desktop Navigation START -->
+              <div class="uk-navbar-right uk-visible@m">
+                <ul class="uk-navbar-nav">
+                  <li>
+                    <a href="/about.html">About</a>
+                  </li>
+                  <li>
+                    <a href="/">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="/">Services</a>
+                  </li>
+                  <li>
+                    <a
+                      class="uk-button header-nav__button"
+                      href="https://portal.behoofstudio.co.uk/"
+                      target="_blank"
+                      rel="nofollow"
+                      ><span
+                        class="uk-margin-small-right"
+                        uk-icon="sign-in"
+                      ></span
+                      >Customer Login</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Desktop Navigation END -->
+              <!-- Mobile Navigation Toggle START -->
+              <a
+                href="#"
+                class="uk-icon-link uk-hidden@m"
+                uk-icon="icon: menu; ratio: 2"
+                uk-toggle="target: #offcanvas-overlay"
+              ></a>
+              <!-- Mobile Navigation Toggle END -->
+              <!-- Offcanvas START -->
+              <div
+                id="offcanvas-overlay"
+                uk-offcanvas="overlay: true; mode: push"
+              >
+                <div class="uk-offcanvas-bar">
+                  <button
+                    class="uk-offcanvas-close"
+                    type="button"
+                    uk-close
+                  ></button>
+                  <h3>Title</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+              <!-- Offcanvas END -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header Section END -->
+    <!-- Hero Section START -->
+    <div class="uk-section uk-section-default uk-padding-remove-bottom">
+      <div class="uk-container">
+        <div class="uk-child-width-1-2@m" uk-grid>
+          <div class="hero__container uk-flex uk-flex-column uk-flex-center">
+            <h2 class="hero__title--about">
+              From Cumbria with love.
+            </h2>
+            <img
+              data-src="assets/images/watercolor_26.png"
+              width="300"
+              height="70"
+              alt="Abstract watercolor brush accent"
+              uk-img
+            />
+            <p class="hero__subtitle">
+              Welcome to Eden. As it must be without doubt how biblical Garden
+              of Eden looked like in ancient times! Piece of heaven on earth and
+              a truly inspirational place.
+            </p>
+          </div>
+          <div>
+            <div uk-slider="autoplay: true; center: true;">
+              <div
+                class="about__slider uk-position-relative uk-visible-toggle uk-light"
+                tabindex="-1"
+              >
+                <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                  <li>
+                    <div
+                      class="uk-height-large uk-background-cover slider-panel"
+                      data-src="/assets/images/cumbria_photos/cumbria_1.jpg"
+                      uk-img
+                    ></div>
+                  </li>
+                  <li>
+                    <div
+                      class="uk-height-large uk-background-cover slider-panel"
+                      data-src="/assets/images/cumbria_photos/cumbria_2.jpg"
+                      uk-img
+                    ></div>
+                  </li>
+                  <li>
+                    <div
+                      class="uk-height-large uk-background-cover slider-panel"
+                      data-src="/assets/images/cumbria_photos/cumbria_3.jpg"
+                      uk-img
+                    ></div>
+                  </li>
+                  <li>
+                    <div
+                      class="uk-height-large uk-background-cover slider-panel"
+                      data-src="/assets/images/cumbria_photos/cumbria_4.jpg"
+                      uk-img
+                    ></div>
+                  </li>
+                </ul>
+
+                <a
+                  class="uk-position-center-left uk-position-small uk-hidden-hover"
+                  href="#"
+                  uk-slidenav-previous
+                  uk-slider-item="previous"
+                ></a>
+                <a
+                  class="uk-position-center-right uk-position-small uk-hidden-hover"
+                  href="#"
+                  uk-slidenav-next
+                  uk-slider-item="next"
+                ></a>
+              </div>
+
+              <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section END -->
+
+    <!-- Info Box Section START -->
+    <div class="uk-section uk-section-default">
+      <div class="uk-container">
+        <div class="info-box__container">
+          <div class="info-box__inner-container">
+            <div class="uk-child-width-expand@s" uk-grid>
+              <div class="uk-text-center uk-text-left@s">
+                <h2 class="info-box__title uk-text-bold">
+                  Whatever you want people to do to you, do also to them.
+                </h2>
+              </div>
+              <div class="uk-text-center uk-text-right@s">
+                <span
+                  class="info-box__icon"
+                  uk-icon="icon: heart; ratio: 3"
+                ></span>
+              </div>
+            </div>
+            <hr class="info-box__divider" />
+            <div class="uk-child-width-expand@s uk-grid-large" uk-grid>
+              <div class="uk-text-center uk-text-left@s">
+                <p class="info-box__column-title">COMMUNICATION</p>
+                <p class="info-box__column-content">Excellent communication is the backbone of any successful project and long-term cooperation. Our customers can always rely on our support and guidance.</p>
+              </div>
+              <div class="uk-text-center uk-text-left@s">
+                <p class="info-box__column-title">EMPATHY</p>
+                <p class="info-box__column-content">We strive to look at each project through the eyes of both our customers and their clients in order to best identify the real needs and recommend an individual solutions.</p>
+              </div>
+              <div class="uk-text-center uk-text-left@s">
+                <p class="info-box__column-title">EXPERTISE</p>
+                <p class="info-box__column-content">The world of Web technologies is undergoing rapid evolution. We keep our finger on the pulse, so that our customers can concentrate on expanding their businesses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Info Box Section END -->
+
+    <!-- Footer Section START -->
+    <div class="uk-section uk-section-default uk-padding-remove-top">
+      <div class="uk-container">
+        <div class="footer__container">
+          <div class="footer__inner-container">
+            <div
+              class="uk-grid-match uk-child-width-expand@s footer__grid"
+              uk-grid
+            >
+              <div>
+                <div class="uk-card uk-card-body">
+                  <a href="/"
+                    ><img
+                      data-src="/assets/images/behoof_logo_black.svg"
+                      width="265"
+                      height="100"
+                      alt="Behoof Studio Logo"
+                      uk-img
+                  /></a>
+                  <hr class="uk-divider-small footer__divider" />
+                  <p>
+                    <span
+                      class="uk-margin-small-right"
+                      uk-icon="icon: mail"
+                    ></span
+                    >contact@behoofstudio.co.uk
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="uk-card uk-card-body uk-text-right">
+                  <img
+                    data-src="/assets/images/footer_illustration.png"
+                    width="250"
+                    height="250"
+                    alt="Abstract Illustration"
+                    uk-img
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-section uk-section-default uk-padding-remove-top">
+      <div class="uk-container">
+        <div class="uk-child-width-expand@m" uk-grid>
+          <div class="uk-text-center uk-text-left@l">
+            <p class="uk-link-muted">
+              <a href="/">© 2020 Behoof Studio</a> |
+              <a href="https://absurd.design/" target="_blank" rel="nofollow"
+                >© Illustrations Absurd Design</a
+              >
+            </p>
+          </div>
+          <div class="uk-text-center uk-text-right@l">
+            <p class="uk-link-muted">
+              <a href="/">Privacy & Cookies Policy</a> | <a href="/">Sitemap</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section END -->
+
+    <div class="scroll-to-top uk-visible@m" uk-totop uk-scroll></div>
+
+    <script src="assets/dist/index.js" defer></script>
+
+    <!-- Elfsight Social Share Widget START -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-7f5c428f-85f2-4e3a-98d4-3a93605835a6"></div>
+    <!-- Elfsight Social Share Widget END -->
+  </body>
+</html>
