@@ -156,3 +156,20 @@
     border-radius: 5px;
     box-shadow: 0px 2px 10px -4px rgba(30, 30, 60, 0.3);
 }
+
+.portfolio__main-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 15px 25px -4px rgba(30, 30, 60, 0.1);
+    transition: all .3s linear;
+    &:hover {
+        box-shadow: 0px 5px 10px -5px rgba(30,30,60,0.1);
+    }
+}
+
+.portfolio__title {
+    letter-spacing: 0.5;
+    font-weight: 900;
+    font-size: 36px;
+}
