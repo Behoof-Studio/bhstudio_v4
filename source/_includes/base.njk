@@ -168,8 +168,11 @@
       </div>
     </div>
     <!-- Header Section END -->
+    {% block content %}
+      {{ content | safe }}
+    {% endblock content %}
 
-    {{ content | safe }}
+    {# {% block case_study %}{% endblock case_study %} #}
 
     <!-- Footer Section START -->
     <div class="uk-section uk-section-default uk-padding-remove-top">
