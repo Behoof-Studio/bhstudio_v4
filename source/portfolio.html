@@ -1,436 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon Links START -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Favicon Links END -->
-    <title>⚡️Behoof Studio V4</title>
-    <link rel="stylesheet" href="assets/dist/styles.css" />
-  </head>
-  <body>
-    <!-- Header Section START -->
-    <div
-      class="header__section uk-section uk-section-default uk-section-xsmall"
-    >
-      <div class="uk-container">
-        <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-          <div class="uk-navbar-left">
-            <a href="/"
-              ><img
-                data-src="/assets/images/bhstudio_logo_color_vector.svg"
-                width="220"
-                height="70"
-                alt="Behoof Studio Logo"
-                uk-img
-            /></a>
-          </div>
-          <div class="uk-navbar-right">
-            <nav
-              class="uk-navbar-container uk-navbar-transparent header-nav__container"
-              uk-navbar
-            >
-              <!-- Desktop Navigation START -->
-              <div class="uk-navbar-right uk-visible@m">
-                <ul class="uk-navbar-nav">
-                  <li>
-                    <a href="/about.html">About</a>
-                  </li>
-                  <li>
-                    <a href="/portfolio.html">Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="/">Services</a>
-                  </li>
-                  <li>
-                    <a
-                      class="uk-button header-nav__button"
-                      href="https://portal.behoofstudio.co.uk/"
-                      target="_blank"
-                      rel="nofollow"
-                      ><span
-                        class="uk-margin-small-right"
-                        uk-icon="sign-in"
-                      ></span
-                      >Customer Login</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <!-- Desktop Navigation END -->
-              <!-- Mobile Navigation Toggle START -->
-              <a
-                href="#"
-                class="uk-icon-link uk-hidden@m"
-                uk-icon="icon: menu; ratio: 2"
-                uk-toggle="target: #offcanvas-overlay"
-              ></a>
-              <!-- Mobile Navigation Toggle END -->
-              <!-- Offcanvas START -->
-              <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-                  <button
-                  class="uk-offcanvas-close"
-                  type="button"
-                  uk-close
-                ></button>
-                    <ul class="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical">
-                        <li class="uk-nav-header">Menu</li>
-                        <li><a href="/"><span class="uk-margin-small-right" uk-icon="icon: home"></span> Home</a></li>
-                        <li><a href="/about.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> About</a></li>
-                        <li><a href="/portfolio.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Portfolio</a></li>
-                        <li><a href="/services.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Services</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li><a target="_blank"
-                          rel="nofollow" href="https://portal.behoofstudio.co.uk/"><span class="uk-margin-small-right" uk-icon="icon: sign-in"></span> Login</a></li>
-                    </ul>
-            
-                </div>
-            </div>
-              <!-- Offcanvas END -->
-            </nav>
-          </div>
+---
+layout: "base.njk"
+title: "Portfolio"
+---
+
+<!-- Hero Section START -->
+<div class="uk-section uk-section-default uk-padding-remove-bottom">
+  <div class="uk-container">
+    <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div class="uk-card-media-left uk-cover-container">
+        <img src="/assets/images/mw_photographic_branding.jpg" alt="Portfolio cover image" uk-cover>
+        <canvas width="600" height="400"></canvas>
+      </div>
+      <div class="uk-flex uk-flex-column uk-flex-between">
+        <div class="uk-card-body">
+          <a class="uk-link-reset" href="/">
+            <h2 class="uk-card-title portfolio__title">Media Left</h3>
+          </a>
+          <p class="portfolio__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt.</p>
+        </div>
+        <div class="uk-card-footer">
+          <span class="uk-badge card__badge">Case Study</span><span
+            class="uk-badge card__badge card__badge--green">Blog</span>
         </div>
       </div>
     </div>
-    <!-- Header Section END -->
-    <!-- Hero Section START -->
-    <div class="uk-section uk-section-default uk-padding-remove-bottom">
-      <div class="uk-container">
-        <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-                <img src="/assets/images/mw_photographic_branding.jpg" alt="Portfolio cover image" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div class="uk-flex uk-flex-column uk-flex-between">
-                <div class="uk-card-body">
-                    <a class="uk-link-reset" href="/"><h2 class="uk-card-title portfolio__title">Media Left</h3></a>
-                    <p class="portfolio__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-                <div class="uk-card-footer">
-                    <span class="uk-badge card__badge">Case Study</span
-                    ><span class="uk-badge card__badge card__badge--green"
-                      >Blog</span
-                    >
-                  </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <!-- Hero Section END -->
-    <!-- Posts Grid Section START -->
-    <div class="uk-section uk-section-default">
-      <div class="uk-container">
-        <div
-          class="uk-child-width-1-2@s uk-child-width-1-3@m"
-          uk-grid="masonry: true"
-        >
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/city-art-street-building-4481012.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#">Media Top</a>
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span
-                ><span class="uk-badge card__badge card__badge--green"
-                  >Blog</span
-                >
-              </div>
-            </div>
+  </div>
+</div>
+<!-- Hero Section END -->
+<!-- Posts Grid Section START -->
+<div class="uk-section uk-section-default">
+  <div class="uk-container">
+    <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/city-art-street-building-4481012.jpg" alt="" />
           </div>
-          <!-- Card Component END -->
-
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/cold-snow-wood-light-4481021.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#"
-                    >Lorem ipsum dolor sit amet</a
-                  >
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span>
-              </div>
-            </div>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Media Top</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
           </div>
-          <!-- Card Component END -->
-
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/sunrise-hills-dew-lake-district-4481017.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#">Media Top</a>
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span
-                ><span class="uk-badge card__badge card__badge--green"
-                  >Blog</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Card Component END -->
-
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/city-art-street-building-4481012.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#">Media Top</a>
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span
-                ><span class="uk-badge card__badge card__badge--green"
-                  >Blog</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Card Component END -->
-
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/city-art-street-building-4481012.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#">Media Top</a>
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span
-                ><span class="uk-badge card__badge card__badge--green"
-                  >Blog</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Card Component END -->
-
-          <!-- Card Component START -->
-          <div>
-            <div class="uk-card uk-card-default posts-grid__card">
-              <div class="uk-card-media-top">
-                <img
-                  src="/assets/images/city-art-street-building-4481012.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="uk-card-body">
-                <h3 class="card__title uk-card-title">
-                  <a class="uk-link-reset" href="#">Media Top</a>
-                </h3>
-                <p class="card__excerpt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div class="uk-card-footer">
-                <span class="uk-badge card__badge">Case Study</span
-                ><span class="uk-badge card__badge card__badge--green"
-                  >Blog</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Card Component END -->       
-        </div>
-      </div>
-      <!-- Load More Button START -->
-      <h4 class="button--load-more uk-link-reset"><a href="#">Load More <span uk-icon="arrow-down"></span></a></h3>
-      <!-- Load More Button END -->
-    </div>
-    <!-- Posts Grid Section END -->
-
-    <!-- Footer Section START -->
-    <div class="uk-section uk-section-default uk-padding-remove-top">
-      <div class="uk-container">
-        <div class="footer__container">
-          <div class="footer__inner-container">
-            <div
-              class="uk-grid-match uk-child-width-expand@s footer__grid"
-              uk-grid
-            >
-              <div>
-                <div class="uk-card uk-card-body">
-                  <a href="/"
-                    ><img
-                      data-src="/assets/images/behoof_logo_black.svg"
-                      width="265"
-                      height="100"
-                      alt="Behoof Studio Logo"
-                      uk-img
-                  /></a>
-                  <hr class="uk-divider-small footer__divider" />
-                  <p><span class="uk-margin-small-right" uk-icon="icon: mail"></span>contact@behoofstudio.co.uk</p>
-                </div>
-              </div>
-              <div>
-                <div class="uk-card uk-card-body uk-text-right">
-                  <img
-                      data-src="/assets/images/footer_illustration.png"
-                      width="250"
-                      height="250"
-                      alt="Abstract Illustration"
-                      uk-img
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span><span
+              class="uk-badge card__badge card__badge--green">Blog</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="uk-section uk-section-default uk-padding-remove-top">
-      <div class="uk-container">
-        <div class="uk-child-width-expand@m" uk-grid>
-          <div class="uk-text-center uk-text-left@l">
-            <p class="uk-link-muted"><a href="/">© 2020 Behoof Studio</a> | <a href="https://absurd.design/" target="_blank" rel="nofollow">© Illustrations Absurd Design</a></p>
+      <!-- Card Component END -->
+
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/cold-snow-wood-light-4481021.jpg" alt="" />
           </div>
-          <div class="uk-text-center uk-text-right@l">
-            <p class="uk-link-muted"><a href="/">Privacy & Cookies Policy</a> | <a href="/">Sitemap</a></p>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Lorem ipsum dolor sit amet</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
           </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span>
+          </div>
+        </div>
       </div>
+      <!-- Card Component END -->
+
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/sunrise-hills-dew-lake-district-4481017.jpg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Media Top</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
+          </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span><span
+              class="uk-badge card__badge card__badge--green">Blog</span>
+          </div>
+        </div>
       </div>
+      <!-- Card Component END -->
+
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/city-art-street-building-4481012.jpg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Media Top</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
+          </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span><span
+              class="uk-badge card__badge card__badge--green">Blog</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card Component END -->
+
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/city-art-street-building-4481012.jpg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Media Top</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
+          </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span><span
+              class="uk-badge card__badge card__badge--green">Blog</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card Component END -->
+
+      <!-- Card Component START -->
+      <div>
+        <div class="uk-card uk-card-default posts-grid__card">
+          <div class="uk-card-media-top">
+            <img src="/assets/images/city-art-street-building-4481012.jpg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <h3 class="card__title uk-card-title">
+              <a class="uk-link-reset" href="#">Media Top</a>
+            </h3>
+            <p class="card__excerpt">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt.
+            </p>
+          </div>
+          <div class="uk-card-footer">
+            <span class="uk-badge card__badge">Case Study</span><span
+              class="uk-badge card__badge card__badge--green">Blog</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card Component END -->
     </div>
-    <!-- Footer Section END -->
-
-    <div class="scroll-to-top uk-visible@m" uk-totop uk-scroll></div>
-
-    <script src="assets/dist/index.js" defer></script>
-
-    <!-- Elfsight Social Share Widget START -->
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-7f5c428f-85f2-4e3a-98d4-3a93605835a6"></div>
-    <!-- Elfsight Social Share Widget END -->
-  </body>
-</html>
+  </div>
+  <!-- Load More Button START -->
+  <h4 class="button--load-more uk-link-reset"><a href="#">Load More <span uk-icon="arrow-down"></span></a></h3>
+    <!-- Load More Button END -->
+</div>
+<!-- Posts Grid Section END -->
