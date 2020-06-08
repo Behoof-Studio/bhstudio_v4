@@ -139,25 +139,26 @@
               ></a>
               <!-- Mobile Navigation Toggle END -->
               <!-- Offcanvas START -->
-              <div
-                id="offcanvas-overlay"
-                uk-offcanvas="overlay: true; mode: push"
-              >
-                <div class="uk-offcanvas-bar">
+              <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
                   <button
-                    class="uk-offcanvas-close"
-                    type="button"
-                    uk-close
-                  ></button>
-                  <h3>Title</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  class="uk-offcanvas-close"
+                  type="button"
+                  uk-close
+                ></button>
+                    <ul class="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical">
+                        <li class="uk-nav-header">Menu</li>
+                        <li><a href="/"><span class="uk-margin-small-right" uk-icon="icon: home"></span> Home</a></li>
+                        <li><a href="/about.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> About</a></li>
+                        <li><a href="/portfolio.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Portfolio</a></li>
+                        <li><a href="/services.html"><span class="uk-margin-small-right" uk-icon="icon: chevron-right"></span> Services</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a target="_blank"
+                          rel="nofollow" href="https://portal.behoofstudio.co.uk/"><span class="uk-margin-small-right" uk-icon="icon: sign-in"></span> Login</a></li>
+                    </ul>
+            
                 </div>
-              </div>
+            </div>
               <!-- Offcanvas END -->
             </nav>
           </div>
