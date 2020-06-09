@@ -1,0 +1,99 @@
+---
+layout: "base.njk"
+title: "Our Work"
+pagination:
+  data: collections.home_page
+  size: 4
+  reverse: true
+---
+
+{% set first_post = pagination.items[0] %}
+{% set paginated_posts = pagination.items %}
+
+<!-- Hero Section START -->
+<div class="uk-section uk-section-default uk-padding-remove-bottom">
+  <div class="uk-container">
+    <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div class="uk-card-media-left uk-cover-container">
+        <img src="{{ first_post.data.cover_image }}" alt="Portfolio cover image" uk-cover>
+        <canvas width="600" height="400"></canvas>
+      </div>
+      <div class="uk-flex uk-flex-column uk-flex-between">
+        <div class="uk-card-body">
+          <a class="uk-link-reset" href="{{ first_post.url | url }}">
+            <h2 class="uk-card-title portfolio__title">{{ first_post.data.title }}</h3>
+          </a>
+          <p class="portfolio__subtitle">{{ first_post.data.client | truncate(350) }}</p>
+        </div>
+        <div class="uk-card-footer">
+          <span class="uk-badge card__badge">Case Study</span><span
+            class="uk-badge card__badge card__badge--green">Blog</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero Section END -->
+<!-- Posts Grid Section START -->
+<div class="uk-section uk-section-default">
+  <div class="uk-container">
+    <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+      {%- for post in paginated_posts -%}
+        {% if post !== first_post %}
+          <!-- Card Component START -->
+          <div>
+            <div class="uk-card uk-card-default posts-grid__card">
+              <div class="uk-card-media-top">
+                <img src="{{ post.data.cover_image }}" alt="Portfolio cover image" />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="card__title uk-card-title">
+                  <a class="uk-link-reset" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h3>
+                <p class="card__excerpt">
+                  {{ post.data.client | truncate(350) }}
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <span class="uk-badge card__badge">Case Study</span><span
+                  class="uk-badge card__badge card__badge--green">Blog</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card Component END -->
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+  <!-- Pagination START -->
+  {% if pagination.pageLinks.length > 1 %}
+  <div class="uk-section uk-section-default">
+    <div class="uk-container">
+      <ul class="uk-pagination uk-flex-center" uk-margin>
+    {% if pagination.previousPageLink %}
+    <li><a href="{{ pagination.previousPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset"><span uk-icon="arrow-left"></span> Newer Articles</h4>
+      </a></li>
+    {% else %}
+    <li><a class="uk-disabled" href="{{ pagination.previousPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset"><span uk-icon="arrow-left"></span> Newer Articles</h4>
+      </a></li>
+    {% endif %}
+  
+    {% if pagination.nextPageLink %}
+    <li><a href="{{ pagination.nextPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset">Older Articles <span uk-icon="arrow-right"></span></h4>
+      </a></li>
+    {% else %}
+    <li><a class="uk-disabled" href="{{ pagination.nextPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset">Older Articles <span uk-icon="arrow-right"></span></h4>
+      </a></li>
+    {% endif %}
+  </ul>
+  </div>
+  </div>
+  {% endif %}
+  <!-- Pagination END -->
+</div>
+<!-- Posts Grid Section END -->
+
