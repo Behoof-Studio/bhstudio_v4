@@ -5,6 +5,7 @@ client: "Vistula Polish Community Association in Cumbria is an organisation that
 cover_image: "https://cdn.shortpixel.ai/spai/w_1000+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/dribbble-shot-for-ui-_-ux-with-iphone-x.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/vistula/"
+website_url: "http://vistula.org.uk/"
 ---
 
 # Our Task

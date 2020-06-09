@@ -5,6 +5,7 @@ client: "W 1949 roku powstała w Lancaster polska parafia rzymskokatolicka. W ty
 cover_image: "/assets/images/portfolio-covers/polish-parish-lancaster.png"
 tags: ["case_study", "home_page"]
 permalink: "case-study/polish-parish-lancaster/"
+website_url: "https://www.kosciolwlancaster.org.uk/"
 ---
 
 # Our Task

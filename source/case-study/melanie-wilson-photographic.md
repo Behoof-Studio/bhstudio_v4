@@ -5,6 +5,7 @@ client: "Melanie is a professional photographer located in the lovely (and rainy
 cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/mw_photographic_branding.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/melanie-wilson-photographic/"
+website_url: "https://mwphotographic.co.uk/"
 ---
 
 # Our Task

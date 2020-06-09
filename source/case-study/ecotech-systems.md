@@ -5,6 +5,7 @@ client: "Eco~tech Systems was established by Tristan Josh to satisfy his persona
 cover_image: "https://cdn.shortpixel.ai/spai/w_940+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/imac-FB-Post.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/ecotech-systems/"
+website_url: "https://www.ecotechsystems.co.uk/"
 ---
 
 # Our Task

@@ -5,6 +5,7 @@ client: "KP Joinery has been established in 2007 after few years of building exp
 cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/kp_joinery_photos.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/kp-joinery/"
+website_url: "https://www.kpjoinerybuilding.co.uk/"
 ---
 
 # Our Task

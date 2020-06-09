@@ -5,6 +5,7 @@ client: "Cumbria.pl is the official and largest Polish community online news mag
 cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/website-showcase-mockup-scene1.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/cumbria-pl/"
+website_url: "https://cumbria.pl/"
 ---
 
 # Our Task

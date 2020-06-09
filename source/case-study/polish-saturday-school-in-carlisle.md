@@ -5,6 +5,7 @@ client: "Polish Saturday School in Carlisle was established in September 2012 an
 cover_image: "https://cdn.shortpixel.ai/spai/w_1080+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/szko%C5%82a-sobotnia-mockup.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/polish-saturday-school-in-carlisle/"
+website_url: "http://szkola.vistula.org.uk/"
 ---
 
 # Our Task
