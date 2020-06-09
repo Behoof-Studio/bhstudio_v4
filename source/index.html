@@ -1,6 +1,7 @@
 ---
 layout: "base.njk"
 title: "Home"
+templateEngineOverride: njk
 ---
 
 <!-- Hero Section START -->
@@ -41,35 +42,37 @@ title: "Home"
 <div class="uk-section uk-section-default">
   <div class="uk-container">
     <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-      {% assign home_page_posts = collections.home_page | reverse %}
-      {%- for home_page_post in home_page_posts limit:6 -%}
-      <!-- Card Component START -->
-      <div>
-        <div class="uk-card uk-card-default posts-grid__card">
-          <div class="uk-card-media-top">
-            <img src="{{ home_page_post.data.cover_image }}" alt="" />
-          </div>
-          <div class="uk-card-body">
-            <h3 class="card__title uk-card-title">
-              <a class="uk-link-reset" href="{{ home_page_post.url }}">{{ home_page_post.data.title }}</a>
-            </h3>
-            <p class=" card__excerpt">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt.
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <span class="uk-badge card__badge">Case Study</span><span
-              class="uk-badge card__badge card__badge--green">Blog</span>
+      {% set home_page_posts = collections.home_page | reverse %}
+      {% for home_page_post in home_page_posts %}
+        <!-- Card Component START -->
+        <div>
+          <div class="uk-card uk-card-default posts-grid__card">
+            <div class="uk-card-media-top">
+              <img src="{{ home_page_post.data.cover_image }}" alt="" />
+            </div>
+            <div class="uk-card-body">
+              <h3 class="card__title uk-card-title">
+                <a class="uk-link-reset" href="{{ home_page_post.url }}">{{ home_page_post.data.title }}</a>
+              </h3>
+              <p class=" card__excerpt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt.
+              </p>
+            </div>
+            <div class="uk-card-footer">
+              <span class="uk-badge card__badge">Case Study</span><span
+                class="uk-badge card__badge card__badge--green">Blog</span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Card Component END -->
-      {%- endfor -%}
+        <!-- Card Component END -->
+      {% endfor %}
     </div>
   </div>
   <!-- Load More Button START -->
-  <h4 class="button--load-more uk-link-reset"><a href="/our-work">Read All</a></h3>
-    <!-- Load More Button END -->
+  {% if home_page_posts | length > 9 %}
+    <h4 class="button--load-more uk-link-reset"><a href="/our-work">Read All</a></h3>
+  {% endif %}
+  <!-- Load More Button END -->
 </div>
 <!-- Posts Grid Section END -->
