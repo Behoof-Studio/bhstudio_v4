@@ -14,38 +14,24 @@ pagination:
 {%- for post in pagination.items -%}
 
 <article class="post">
-  <a href="{{ post.url | url }}">{{ post.data.title | capitalize }}</a>
+  <a href="{{ post.url | url }}">{{ post.data.title }}</a>
 </article>
 {%- endfor -%}
 
-{% if pagination.pageLinks.length > 1 %}
-<nav class="pagination">
-  {% if pagination.previousPageLink %}
-  <a class="pagination__item" href="{{ pagination.previousPageHref | url }}">Newer Articles</a>
-  {% else %}
-  <span class="pagination__item">Newer Articles</span>
-  {% endif %}
 
-  {% if pagination.nextPageLink %}
-  <a class="pagination__item" href="{{ pagination.nextPageHref | url }}">Older Articles</a>
-  {% else %}
-  <span class="pagination__item">Older Articles</span>
-  {% endif %}
-</nav>
-{% endif %}
 
 <!-- Hero Section START -->
 <div class="uk-section uk-section-default uk-padding-remove-bottom">
   <div class="uk-container">
     <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">
-        <img src="/assets/images/mw_photographic_branding.jpg" alt="Portfolio cover image" uk-cover>
+        <img src="{{ first_post.data.cover_image }}" alt="Portfolio cover image" uk-cover>
         <canvas width="600" height="400"></canvas>
       </div>
       <div class="uk-flex uk-flex-column uk-flex-between">
         <div class="uk-card-body">
-          <a class="uk-link-reset" href="/">
-            <h2 class="uk-card-title portfolio__title">Media Left</h3>
+          <a class="uk-link-reset" href="{{ first_post.url | url }}">
+            <h2 class="uk-card-title portfolio__title">{{ first_post.data.title }}</h3>
           </a>
           <p class="portfolio__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt.</p>
@@ -202,18 +188,33 @@ pagination:
     </div>
   </div>
   <!-- Pagination START -->
+  {% if pagination.pageLinks.length > 1 %}
   <div class="uk-section uk-section-default">
     <div class="uk-container">
       <ul class="uk-pagination uk-flex-center" uk-margin>
-        <li class="uk-disabled"><a href="#">
-            <h4 class="button--load-more uk-link-reset"><a href="#"><span uk-icon="arrow-left"></span> Previous</a></h3>
-          </a></li>
-        <li><a href="#">
-            <h4 class="button--load-more uk-link-reset"><a href="#">Next <span uk-icon="arrow-right"></span></a></h3>
-          </a></li>
-      </ul>
-    </div>
+    {% if pagination.previousPageLink %}
+    <li><a href="{{ pagination.previousPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset"><span uk-icon="arrow-left"></span> Newer Articles</h4>
+      </a></li>
+    {% else %}
+    <li><a class="uk-disabled" href="{{ pagination.previousPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset"><span uk-icon="arrow-left"></span> Newer Articles</h4>
+      </a></li>
+    {% endif %}
+  
+    {% if pagination.nextPageLink %}
+    <li><a href="{{ pagination.nextPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset">Older Articles <span uk-icon="arrow-right"></span></h4>
+      </a></li>
+    {% else %}
+    <li><a class="uk-disabled" href="{{ pagination.nextPageHref | url }}">
+        <h4 class="button--load-more uk-link-reset">Older Articles <span uk-icon="arrow-right"></span></h4>
+      </a></li>
+    {% endif %}
+  </ul>
   </div>
+  </div>
+  {% endif %}
   <!-- Pagination END -->
 </div>
 <!-- Posts Grid Section END -->
