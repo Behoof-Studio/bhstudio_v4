@@ -3,13 +3,18 @@ layout: "base.njk"
 title: "Our Work"
 pagination:
   data: collections.home_page
-  size: 2
+  size: 4
   reverse: true
 ---
 
+{% assign first_post = pagination.items | first %}
+
+<h1>{{ first_post.data.title }}</h1>
+
 {%- for post in pagination.items -%}
+
 <article class="post">
-  <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  <a href="{{ post.url | url }}">{{ post.data.title | capitalize }}</a>
 </article>
 {%- endfor -%}
 
