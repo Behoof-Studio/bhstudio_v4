@@ -41,7 +41,8 @@ title: "Home"
 <div class="uk-section uk-section-default">
   <div class="uk-container">
     <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-      {%- for home_page_post in collections.home_page -%}
+      {% assign home_page_posts = collections.home_page | reverse %}
+      {%- for home_page_post in home_page_posts limit:6 -%}
       <!-- Card Component START -->
       <div>
         <div class="uk-card uk-card-default posts-grid__card">
@@ -68,7 +69,7 @@ title: "Home"
     </div>
   </div>
   <!-- Load More Button START -->
-  <h4 class="button--load-more uk-link-reset"><a href="#">Load More</a></h3>
+  <h4 class="button--load-more uk-link-reset"><a href="/our-work">Read All</a></h3>
     <!-- Load More Button END -->
 </div>
 <!-- Posts Grid Section END -->
