@@ -1,7 +1,33 @@
 ---
 layout: "base.njk"
 title: "Our Work"
+pagination:
+  data: collections.home_page
+  size: 2
+  reverse: true
 ---
+
+{%- for post in pagination.items -%}
+<article class="post">
+  <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+</article>
+{%- endfor -%}
+
+{% if pagination.pageLinks.length > 1 %}
+<nav class="pagination">
+  {% if pagination.previousPageLink %}
+  <a class="pagination__item" href="{{ pagination.previousPageHref | url }}">Newer Articles</a>
+  {% else %}
+  <span class="pagination__item">Newer Articles</span>
+  {% endif %}
+
+  {% if pagination.nextPageLink %}
+  <a class="pagination__item" href="{{ pagination.nextPageHref | url }}">Older Articles</a>
+  {% else %}
+  <span class="pagination__item">Older Articles</span>
+  {% endif %}
+</nav>
+{% endif %}
 
 <!-- Hero Section START -->
 <div class="uk-section uk-section-default uk-padding-remove-bottom">
@@ -170,8 +196,20 @@ title: "Our Work"
       <!-- Card Component END -->
     </div>
   </div>
-  <!-- Load More Button START -->
-  <h4 class="button--load-more uk-link-reset"><a href="#">Load More <span uk-icon="arrow-down"></span></a></h3>
-    <!-- Load More Button END -->
+  <!-- Pagination START -->
+  <div class="uk-section uk-section-default">
+    <div class="uk-container">
+      <ul class="uk-pagination uk-flex-center" uk-margin>
+        <li class="uk-disabled"><a href="#">
+            <h4 class="button--load-more uk-link-reset"><a href="#"><span uk-icon="arrow-left"></span> Previous</a></h3>
+          </a></li>
+        <li><a href="#">
+            <h4 class="button--load-more uk-link-reset"><a href="#">Next <span uk-icon="arrow-right"></span></a></h3>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Pagination END -->
 </div>
 <!-- Posts Grid Section END -->
+
