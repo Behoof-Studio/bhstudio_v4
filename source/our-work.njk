@@ -76,7 +76,7 @@ pagination:
       </a></li>
     {% else %}
     <li><a class="uk-disabled" href="{{ pagination.previousPageHref | url }}">
-        <h4 class="button--load-more uk-link-reset"><span uk-icon="arrow-left"></span> Newer Articles</h4>
+        <h4 class="button--load-more uk-link-reset color--disabled"><span uk-icon="minus"></span> Newer Articles</h4>
       </a></li>
     {% endif %}
   
@@ -86,7 +86,7 @@ pagination:
       </a></li>
     {% else %}
     <li><a class="uk-disabled" href="{{ pagination.nextPageHref | url }}">
-        <h4 class="button--load-more uk-link-reset">Older Articles <span uk-icon="arrow-right"></span></h4>
+        <h4 class="button--load-more uk-link-reset color--disabled">Older Articles <span uk-icon="minus"></span></h4>
       </a></li>
     {% endif %}
   </ul>
