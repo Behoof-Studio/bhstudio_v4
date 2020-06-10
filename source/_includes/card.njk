@@ -12,8 +12,14 @@
             </p>
         </div>
         <div class="uk-card-footer">
-            <span class="uk-badge card__badge">Case Study</span>
-            <span class="uk-badge card__badge card__badge--green">Blog</span>
+            {%- for tag in post.data.tags -%}
+                {% if tag === "case_study" %}
+                    <span class="uk-badge card__badge">Case Study</span>
+                {% endif %}
+                {% if tag === "blog" %}
+                    <span class="uk-badge card__badge card__badge--green">Blog</span>
+                {% endif %}
+            {%- endfor -%}
         </div>
     </div>
 </div>
