@@ -7,11 +7,12 @@ eleventyExcludeFromCollections: true
 <div class="uk-section uk-section-default">
   <div class="uk-container">
     <h1 class="hero__title">Sitemap</h1>
+    <h4 class="uk-margin-remove-top"><a class="uk-link-muted" href="/sitemap.xml"><span class="uk-margin-small" uk-icon="icon: arrow-right"></span> Go to XML version</a></h4>
     <hr/>
     <ul class="uk-list uk-list-striped">
     {%- for item in collections.all %}
     {%- if item.data.sitemapIgnore !== true %}
-      <li><a class="uk-link-text" href="{{ item.url }}"> https://www.behoofstudio.co.uk{{ item.url }}</a></li>
+      <li><a class="uk-link-text" href="{{ item.url }}">https://www.behoofstudio.co.uk{{ item.url }}</a></li>
     {% endif %}
     {% endfor %}
     </ul>
