@@ -43,28 +43,9 @@ templateEngineOverride: njk
   <div class="uk-container">
     <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
       {% set home_page_posts = collections.home_page | reverse %}
-      {% for home_page_post in home_page_posts %}
+      {% for post in home_page_posts %}
         <!-- Card Component START -->
-        <div>
-          <div class="uk-card uk-card-default posts-grid__card">
-            <div class="uk-card-media-top">
-              <img src="{{ home_page_post.data.cover_image }}" alt="" />
-            </div>
-            <div class="uk-card-body">
-              <h3 class="card__title uk-card-title">
-                <a class="uk-link-reset" href="{{ home_page_post.url }}">{{ home_page_post.data.title }}</a>
-              </h3>
-              <p class=" card__excerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt.
-              </p>
-            </div>
-            <div class="uk-card-footer">
-              <span class="uk-badge card__badge">Case Study</span><span
-                class="uk-badge card__badge card__badge--green">Blog</span>
-            </div>
-          </div>
-        </div>
+        {% include "card.njk" %}
         <!-- Card Component END -->
       {% endfor %}
     </div>
