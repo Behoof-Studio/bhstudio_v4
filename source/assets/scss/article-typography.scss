@@ -1,0 +1,87 @@
+.article__container {
+    font-size: 16px;
+    p {
+        margin-bottom: 1.15rem;}
+
+    h1, h2, h3, h4, h5 {
+        margin: 2.75rem 0 1.05rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        line-height: 1.15;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 3.052em;
+    }
+
+    h2 {font-size: 2.441em;}
+
+    h3 {font-size: 1.953em;}
+
+    h4 {font-size: 1.563em;}
+
+    h5 {font-size: 1.25em;}
+
+    small, .text_small {font-size: 0.8em;}
+
+    blockquote {
+        padding: 10px 20px;
+        border-left: 5px solid #d2d2d2;
+        font-size: 18px;
+        line-height: 22px;
+        font-style: normal;
+        margin: 0 0 10px 0;
+    }
+
+    em {
+        color: #2d2d2d;
+    }
+
+    pre { 
+        white-space: pre-wrap;
+        font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+    table td, table th {
+        border: 1px solid #E0E0E0;
+        padding: 5px 4px;
+    }
+    table tbody td {
+        font-size: 13px;
+        color: #000000;
+    }
+    table tr:nth-child(even) {
+        background: #EEEEEE;
+    }
+    table thead {
+        background: #D2D2D2;
+        background: -moz-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+        background: -webkit-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+        background: linear-gradient(to bottom, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+    }
+    table thead th {
+        font-size: 15px;
+        font-weight: bold;
+        color: #000000;
+        text-align: left;
+    }
+    table tfoot {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        background: #D2D2D2;
+        background: -moz-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+        background: -webkit-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+        background: linear-gradient(to bottom, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+    }
+    table tfoot td {
+        font-size: 14px;
+    }
+        
+}
