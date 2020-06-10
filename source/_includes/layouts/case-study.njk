@@ -33,81 +33,43 @@
 </div>
 <!-- Main Content Section END -->
 
+{# Limit displayed items START #}
+{% set related_posts = collections.home_page | reverse | limit(6) %}
+{# Limit displayed items END #}
+
 <!-- More Case Studies Section START -->
 <div class="uk-section uk-section-default">
   <div class="uk-container">
-    <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match" uk-grid>
-      <!-- Card Component START -->
-      <div>
-        <div class="uk-card uk-card-default posts-grid__card uk-flex uk-flex-between uk-flex-column">
-          <div class="uk-card-media-top">
-            <img src="/assets/images/city-art-street-building-4481012.jpg" alt="" />
+    <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+      {%- for post in related_posts -%}
+        {# {% if page.url !== post.url %} #}
+          <!-- Card Component START -->
+          <div>
+            <div class="uk-card uk-card-default posts-grid__card">
+              <div class="uk-card-media-top">
+                <img src="{{ post.data.cover_image }}" alt="" />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="card__title uk-card-title">
+                  <a class="uk-link-reset" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h3>
+                <p class="card__excerpt">
+                  {{ post.data.client | truncate(250) }}
+                </p>
+              </div>
+              <div class="uk-card-footer">
+                <span class="uk-badge card__badge">Case Study</span><span
+                  class="uk-badge card__badge card__badge--green">Blog</span>
+              </div>
+            </div>
           </div>
-          <div class="uk-card-body">
-            <h3 class="card__title uk-card-title">
-              <a class="uk-link-reset" href="#">Media Top</a>
-            </h3>
-            <p class="card__excerpt">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt.
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <span class="uk-badge card__badge">Case Study</span><span
-              class="uk-badge card__badge card__badge--green">Blog</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card Component END -->
-
-      <!-- Card Component START -->
-      <div>
-        <div class="uk-card uk-card-default posts-grid__card uk-flex uk-flex-between uk-flex-column">
-          <div class="uk-card-media-top">
-            <img src="/assets/images/cold-snow-wood-light-4481021.jpg" alt="" />
-          </div>
-          <div class="uk-card-body">
-            <h3 class="card__title uk-card-title">
-              <a class="uk-link-reset" href="#">Lorem ipsum dolor sit amet</a>
-            </h3>
-            <p class="card__excerpt">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt.
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <span class="uk-badge card__badge">Case Study</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card Component END -->
-
-      <!-- Card Component START -->
-      <div>
-        <div class="uk-card uk-card-default posts-grid__card uk-flex uk-flex-between uk-flex-column">
-          <div class="uk-card-media-top">
-            <img src="/assets/images/sunrise-hills-dew-lake-district-4481017.jpg" alt="" />
-          </div>
-          <div class="uk-card-body">
-            <h3 class="card__title uk-card-title">
-              <a class="uk-link-reset" href="#">Media Top</a>
-            </h3>
-            <p class="card__excerpt">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt.
-            </p>
-          </div>
-          <div class="uk-card-footer">
-            <span class="uk-badge card__badge">Case Study</span><span
-              class="uk-badge card__badge card__badge--green">Blog</span>
-          </div>
-        </div>
-      </div>
-      <!-- Card Component END -->
+          <!-- Card Component END -->
+        {# {% endif %} #}
+      {%- endfor -%}
     </div>
   </div>
   <!-- See More Button START -->
-  <h4 class="button--load-more uk-link-reset"><a href="#">See All <span uk-icon="arrow-right"></span></a></h3>
+  <h4 class="button--load-more uk-link-reset"><a href="/our-work">See All <span uk-icon="arrow-right"></span></a></h3>
     <!-- See More Button END -->
 </div>
 <!-- More Case Studies Section END -->
