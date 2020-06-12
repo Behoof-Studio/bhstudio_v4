@@ -20,9 +20,9 @@ pagination:
       </div>
       <div class="uk-flex uk-flex-column uk-flex-between">
         <div class="uk-card-body">
-          <a class="uk-link-reset" href="{{ first_post.url | url }}">
-            <h2 class="uk-card-title portfolio__title">{{ first_post.data.title }}</h3>
-          </a>
+            <h2 class="uk-card-title portfolio__title">
+              <a class="uk-link-reset" href="{{ first_post.url | url }}">{{ first_post.data.title }}</a>
+            </h2>
           <p class="portfolio__subtitle">{{ first_post.data.client | truncate(350) }}</p>
         </div>
         <div class="uk-card-footer">
