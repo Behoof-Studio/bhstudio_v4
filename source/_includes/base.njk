@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Primary Meta Tags START -->
+    <title>Behoof Studio | {{ title }}</title>
+    <meta name="title" content="Behoof Studio | {{ title }}">
+    <meta name="description" content="We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧">
+    <!-- Primary Meta Tags END -->
     {% include "meta-tags.njk" %}
     <link rel="stylesheet" href="/assets/dist/styles.css" />
   </head>
@@ -12,7 +17,7 @@
       <div class="uk-container">
         <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
           <div class="uk-navbar-left">
-            <a href="/" tabindex="0"
+            <a href="{{ "/" | url }}" tabindex="0"
               ><img
                 data-src="/assets/images/bhstudio_logo_color_vector.svg"
                 width="220"
