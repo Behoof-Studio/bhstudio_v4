@@ -1,7 +1,7 @@
 ---
 layout: "layouts/case-study.njk"
-title: "Polska Parafia Lancaster"
-client: "W 1949 roku powstała w Lancaster polska parafia rzymskokatolicka. W tym okresie niedzielne msze święte odbywały się w budynku gospodarczym w Meeting House Lane w Lancaster. W 1984 roku biskup Szczepan Wesoły dokonał otwarcia i poświęcenia polskiego kościoła rzymskokatolickiego przy Nelson Street w Lancaster, pod wezwaniem Matki Boskiej Królowej Polski. Msze po polsku, odbywają się w kościele regularnie. Przy kościele działa także Polskie Centrum."
+title: "Polish Parish Lancaster"
+client: "In 1949 a Polish Roman Catholic parish was established in Lancaster. During this period, Sunday masses were held in the outbuilding at Meeting House Lane in Lancaster. In 1984, Bishop Szczepan Wesoły opened and consecrated the Polish Roman Catholic Church at Nelson Street in Lancaster, dedicated to Our Lady Queen of Poland. Masses in Polish are held in the church regularly. There is also a Polish Centre at the church."
 cover_image: "/assets/images/portfolio-covers/polish-parish-lancaster.png"
 tags: ["case_study", "home_page"]
 permalink: "case-study/polish-parish-lancaster/"
