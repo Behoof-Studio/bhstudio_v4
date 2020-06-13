@@ -11,17 +11,17 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.behoofstudio.co.uk/">
-    <meta property="og:title" content="Behoof Studio">
-    <meta property="og:description" content="We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧">
-    <meta property="og:image" content="https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg">
+    <meta property="og:url" content={% if page.url %}"https://www.behoofstudio.co.uk{{page.url}}"{% else %}"https://www.behoofstudio.co.uk"{% endif %}">
+    <meta property="og:title" content="Behoof Studio{% if title %} | {{title}}{% endif %}">
+    <meta property="og:description" content={% if client %}"{{client | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
+    <meta property="og:image" content={% if cover_image %}"https://www.behoofstudio.co.uk{{cover_image}}"{% else %}"https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg"{% endif %}>
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.behoofstudio.co.uk/">
-    <meta property="twitter:title" content="Behoof Studio">
-    <meta property="twitter:description" content="We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧">
-    <meta property="twitter:image" content="https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg">
+    <meta property="twitter:url" content={% if page.url %}"https://www.behoofstudio.co.uk{{page.url}}"{% else %}"https://www.behoofstudio.co.uk"{% endif %}">
+    <meta property="twitter:title" content="Behoof Studio{% if title %} | {{title}}{% endif %}">
+    <meta property="twitter:description" content={% if client %}"{{client | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
+    <meta property="twitter:image" content={% if cover_image %}"https://www.behoofstudio.co.uk{{cover_image}}"{% else %}"https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg"{% endif %}>
 
     <!-- Favicon Links START -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
