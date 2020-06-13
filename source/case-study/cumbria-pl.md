@@ -2,7 +2,7 @@
 layout: "layouts/case-study.njk"
 title: "Cumbria.pl"
 client: "Cumbria.pl is the official and largest Polish community online news magazine created mostly for Poles living in Cumbria, UK. It’s origins date back to 2008 and the mission stays the same – to reach as many Poles as possible in order to provide them with regional and national information. The editors of Cumbria.pl are the people who are involved locally in their communities and whose goal is to deepen international integration, promote Polish identity abroad, and provide the latest regional and national information in their native language."
-cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/website-showcase-mockup-scene1.jpg"
+cover_image: "/assets/images/portfolio-covers/cumbria_cover.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/cumbria-pl/"
 website_url: "https://cumbria.pl/"

@@ -2,7 +2,7 @@
 layout: "layouts/case-study.njk"
 title: "Vistula"
 client: "Vistula Polish Community Association in Cumbria is an organisation that officially represents the Cumbrian Polish community before local authorities and other organisations. The association has also been running a Polish Saturday school in Carlisle since 2012, and news portal Cumbria.pl since 2008. It also cooperates in many fields with other similar themed projects such as Multicultural Carlisle, Diverse Cumbria, 303 JAG Squad. In 2019 VISTULA organised Polish Heritage Day that was promoted and supported by Polish Consulate from Manchester."
-cover_image: "https://cdn.shortpixel.ai/spai/w_1000+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/dribbble-shot-for-ui-_-ux-with-iphone-x.jpg"
+cover_image: "/assets/images/portfolio-covers/vistula_cover.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/vistula/"
 website_url: "http://vistula.org.uk/"

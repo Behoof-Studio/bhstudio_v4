@@ -2,7 +2,7 @@
 layout: "layouts/case-study.njk"
 title: "KP Joinery – Building Contractors"
 client: "KP Joinery has been established in 2007 after few years of building experience. KP Joinery is specialized in: new build and extensions, loft conversions, roof repairing, rendering and plastering, kitchens and bathrooms installations, tilling and all aspect of masonry stones, decking and patios all kinds, driveways, gardening and fencing, external insulations system, plumbing and electric."
-cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/kp_joinery_photos.jpg"
+cover_image: "/assets/images/portfolio-covers/kp-joinery_cover.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/kp-joinery/"
 website_url: "https://www.kpjoinerybuilding.co.uk/"

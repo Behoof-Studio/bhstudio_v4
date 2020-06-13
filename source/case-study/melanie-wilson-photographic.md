@@ -2,7 +2,7 @@
 layout: "layouts/case-study.njk"
 title: "Melanie Wilson Photographic"
 client: "Melanie is a professional photographer located in the lovely (and rainy) Cumbria. She photographs weddings across the North of the United Kingdom.As she says herself – she loves photographing weddings, capturing every little detail of a day that has been thoughtfully chosen by you!"
-cover_image: "https://cdn.shortpixel.ai/spai/w_1100+q_glossy+ret_img+to_webp/https://www.behoofstudio.co.uk/wp-content/uploads/2019/05/mw_photographic_branding.jpg"
+cover_image: "/assets/images/portfolio-covers/mw-photographic_cover.jpg"
 tags: ["case_study", "home_page"]
 permalink: "case-study/melanie-wilson-photographic/"
 website_url: "https://mwphotographic.co.uk/"
