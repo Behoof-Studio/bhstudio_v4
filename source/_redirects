@@ -1,0 +1,12 @@
+# Redirects from what the browser requests to what Netlify serve https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+/project-application                                    /contact
+/faq                                                    /services
+/start                                                  /contact
+/our-process                                            /services
+/blog                                                   /our-work
+/portfolio                                              /our-work
+/timeless-design-principles-van-de-graaf-golden-canon/  /our-work
+/5-tips-for-setting-smart-goals/                        /our-work
+/4-tips-on-how-to-organize-the-learning-process/        /our-work
+/top-10-principles-of-good-web-design/                  /our-work
+/behoof-walk-in-martindale/                             /our-work

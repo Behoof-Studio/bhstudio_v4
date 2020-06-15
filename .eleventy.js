@@ -5,6 +5,9 @@ module.exports = function (eleventyConfig) {
     // Copy `favicon/` to `_site/favicon`
     eleventyConfig.addPassthroughCopy("source/favicon");
 
+    // Copy Netlify _redirects file to root of the project
+    eleventyConfig.addPassthroughCopy("source/_redirects");
+
     // limit filter
     eleventyConfig.addFilter("limit", function (array, limit) {
         return array.slice(0, limit);
