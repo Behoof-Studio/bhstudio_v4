@@ -4,7 +4,7 @@
     <!-- Primary Meta Tags START -->
     <title>Behoof Studio | {{ title }}</title>
     <meta name="title" content="Behoof Studio | {{ title }}">
-    <meta name="description" content="We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧">
+    <meta name="description" content={% if client %}"{{client | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
     <!-- Primary Meta Tags END -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
