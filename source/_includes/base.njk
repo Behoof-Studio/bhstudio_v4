@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <!-- Primary Meta Tags START -->
-    <title>Behoof Studio{% if post.title %} | {{post.title}}{% else %}{{ title }}{% endif %}</title>
-    <meta name="title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %}{{ title }}{% endif %}">
+    <title>Behoof Studio{% if post.title %} | {{post.title}}{% else %} | {{ title }}{% endif %}</title>
+    <meta name="title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %} | {{ title }}{% endif %}">
     <meta name="description" content={% if post.excerpt %}"{{post.excerpt | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
     <!-- Primary Meta Tags END -->
     <meta charset="UTF-8" />
@@ -12,14 +12,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content={% if page.url %}"https://www.behoofstudio.co.uk{{page.url}}"{% else %}"https://www.behoofstudio.co.uk"{% endif %}">
-    <meta property="og:title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %}{{ title }}{% endif %}">
+    <meta property="og:title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %} | {{ title }}{% endif %}">
     <meta property="og:description" content={% if post.excerpt %}"{{post.excerpt | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
     <meta property="og:image" content={% if post.mainImage.asset.url %}"{{post.mainImage.asset.url}}"{% else %}"https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg"{% endif %}>
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content={% if page.url %}"https://www.behoofstudio.co.uk{{page.url}}"{% else %}"https://www.behoofstudio.co.uk"{% endif %}">
-    <meta property="twitter:title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %}{{ title }}{% endif %}">
+    <meta property="twitter:title" content="Behoof Studio{% if post.title %} | {{post.title}}{% else %} | {{ title }}{% endif %}">
     <meta property="twitter:description" content={% if post.excerpt %}"{{post.excerpt | truncate(150)}}"{% else %}"We build lightweight, modern websites for small and big companies - located in Cumbria, United Kingdom. 🇬🇧"{% endif %}>
     <meta property="twitter:image" content={% if post.mainImage.asset.url %}"{{post.mainImage.asset.url}}"{% else %}"https://www.behoofstudio.co.uk/assets/images/meta/bh-studio-cover.jpg"{% endif %}>
 
