@@ -5,13 +5,11 @@ sitemapIgnore: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for item in collections.all %}
-{%- if item.data.sitemapIgnore !== true %}
-  <url>
-    <loc>https://www.behoofstudio.co.uk{{ item.url }}</loc>
-    <lastmod>{{ item.date }}</lastmod>
-    <changefreq>{{ item.data.changeFrequency or globals.sitemap.defaultChangeFrequency }}</changefreq>
-    <priority>{{ item.data.sitemapPriority or globals.sitemap.defaultPriority }}</priority>
-  </url>
-{% endif %}
+  {%- if item.data.sitemapIgnore !== true %}
+    <url>
+      <loc>https://www.behoofstudio.co.uk{{ item.url }}</loc>
+      <lastmod>{{ item.date }}</lastmod>
+    </url>
+  {% endif %}
 {% endfor %}
 </urlset>

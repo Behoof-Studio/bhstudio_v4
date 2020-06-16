@@ -5,6 +5,7 @@ pagination:
     size: 1
     alias: post
 permalink: "/{{ post.slug.current }}/"
+tags: post
 ---
 
 {{ post.body | sanityToHTML | safe }}
