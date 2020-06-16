@@ -1,11 +1,11 @@
 ---
+tags: "yolo"
 layout: "layouts/case-study.njk"
 pagination:
     data: posts
     size: 1
     alias: post
 permalink: "/{{ post.slug.current }}/"
-tags: post
 ---
 
 {{ post.body | sanityToHTML | safe }}

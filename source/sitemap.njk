@@ -11,15 +11,10 @@ eleventyExcludeFromCollections: true
     <hr/>
     <ul class="uk-list uk-list-striped">
     {%- for item in collections.all %}
-      {# {%- if item.data.sitemapIgnore !== true %} #}
-        <li><a class="uk-link-text" href="{{ item.url }}">https://www.behoofstudio.co.uk{{ item.url }}</a></li>
-      {# {% endif %} #}
-    {% endfor %}
-    {# {%- for item in posts %}
       {%- if item.data.sitemapIgnore !== true %}
-        <li><a class="uk-link-text" href="/{{ item.slug.current }}">https://www.behoofstudio.co.uk/{{ item.slug.current }}</a></li>
+        <li><a class="uk-link-text" href="{{ item.url }}">https://www.behoofstudio.co.uk{{ item.url }}</a></li>
       {% endif %}
-    {% endfor %} #}
+    {% endfor %}
     </ul>
   </div>
 </div>
