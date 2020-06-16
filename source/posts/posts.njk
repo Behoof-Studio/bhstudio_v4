@@ -1,0 +1,10 @@
+---
+layout: "layouts/case-study.njk"
+pagination:
+    data: posts
+    size: 1
+    alias: post
+permalink: "/{{ post.slug.current }}/"
+---
+
+{{ post.body | sanityToHTML | safe }}

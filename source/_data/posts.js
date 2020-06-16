@@ -13,15 +13,17 @@ const client = sanityClient({
 
 module.exports = async function () {
     const query = `
-    {'posts': *[ _type == "post"]{
+    *[ _type == "post"]{
       title,
       excerpt,
-      author,
-      mainImage,
-      slug { current },
+      author->{name, slug {current}, image{asset->{path, url}}},
+      mainImage{asset->{path,url}},
+      caseStudyUrl,
+      categories[]->{title, description},
+      slug {current},
       publishedAt,
       body
-    } | order(publishedAt desc)}
+    } | order(publishedAt desc)
   `
     const params = {}
 

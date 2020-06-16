@@ -2,9 +2,8 @@
 layout: "base.njk"
 title: "Our Work"
 pagination:
-  data: collections.home_page
+  data: posts
   size: 4
-  reverse: true
 ---
 
 {% set first_post = pagination.items[0] %}
@@ -15,24 +14,24 @@ pagination:
   <div class="uk-container">
     <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">
-        <img src="{{ first_post.data.cover_image }}" alt="Portfolio cover image" uk-cover>
+        <img src="{{ first_post.mainImage.asset.url }}" alt="{{ first_post.mainImage.alt }}" uk-cover>
         <canvas width="600" height="400"></canvas>
       </div>
       <div class="uk-flex uk-flex-column uk-flex-between">
         <div class="uk-card-body">
             <h2 class="uk-card-title portfolio__title">
-              <a class="uk-link-reset" href="{{ first_post.url | url }}">{{ first_post.data.title }}</a>
+              <a class="uk-link-reset" href="/{{ first_post.slug.current | url }}">{{ first_post.title }}</a>
             </h2>
-          <p class="portfolio__subtitle">{{ first_post.data.client | truncate(350) }}</p>
+          <p class="portfolio__subtitle">{{ first_post.excerpt | truncate(350) }}</p>
         </div>
         <div class="uk-card-footer">
-          {%- for tag in first_post.data.tags -%}
-            {% if tag === "case_study" %}
-                <span class="uk-badge card__badge">Case Study</span>
-            {% endif %}
-            {% if tag === "blog" %}
-                <span class="uk-badge card__badge card__badge--green">Blog</span>
-            {% endif %}
+          {%- for tag in first_post.categories -%}
+            {% if tag.title === "Case Study" %}
+                  <span class="uk-badge card__badge">Case Study</span>
+              {% endif %}
+              {% if tag.title === "Blog" %}
+                  <span class="uk-badge card__badge card__badge--green">Blog</span>
+              {% endif %}
           {%- endfor -%}
         </div>
       </div>

@@ -7,16 +7,16 @@
     <div class="uk-child-width-1-2@m" uk-grid>
       <div class="hero__container uk-flex uk-flex-column uk-flex-center">
         <h2 class="hero__title--about">
-          {{ title }}
+          {{ post.title }}
         </h2>
         <img data-src="/assets/images/watercolor_26.png" width="300" height="70" alt="Abstract watercolor brush accent"
           uk-img />
         <p class="hero__subtitle">
-          {{ client }}
+          {{ post.excerpt }}
         </p>
       </div>
       <div>
-        <img class="case-study__cover" data-src="{{ cover_image }}" alt="{{title}} cover illustration." uk-img />
+        <img class="case-study__cover" data-src="{{ post.mainImage.asset.url }}" alt="{{ post.mainImage.alt }}" uk-img />
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@
 <!-- Main Content Section END -->
 
 {# Limit displayed items START #}
-{% set related_posts = collections.home_page | reverse | limit(6) %}
+{% set related_posts = posts | reverse | limit(6) %}
 {# Limit displayed items END #}
 
 <!-- More Case Studies Section START -->

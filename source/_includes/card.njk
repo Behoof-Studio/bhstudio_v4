@@ -1,22 +1,22 @@
 <div>
     <div class="uk-card uk-card-default posts-grid__card">
         <div class="uk-card-media-top">
-            <img src="{{ post.data.cover_image }}" alt="Portfolio cover image" />
+            <img src="{{ post.mainImage.asset.url }}" alt="{{ post.mainImage.alt }}" />
         </div>
         <div class="uk-card-body">
             <h3 class="card__title uk-card-title">
-                <a class="uk-link-reset" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                <a class="uk-link-reset" href="/{{ post.slug.current | url }}">{{ post.title }}</a>
             </h3>
             <p class="card__excerpt">
-                {{ post.data.client | truncate(250) }}
+                {{ post.excerpt | truncate(250) }}
             </p>
         </div>
         <div class="uk-card-footer">
-            {%- for tag in post.data.tags -%}
-                {% if tag === "case_study" %}
+            {%- for tag in post.categories -%}
+                {% if tag.title === "Case Study" %}
                     <span class="uk-badge card__badge">Case Study</span>
                 {% endif %}
-                {% if tag === "blog" %}
+                {% if tag.title === "Blog" %}
                     <span class="uk-badge card__badge card__badge--green">Blog</span>
                 {% endif %}
             {%- endfor -%}
