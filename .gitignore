@@ -1,3 +1,4 @@
 node_modules
 _pgbackup
 _site
+.env
