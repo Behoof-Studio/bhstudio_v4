@@ -1,6 +1,7 @@
 ---
 permalink: /sitemap.xml
 sitemapIgnore: true
+data: posts
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -9,6 +10,14 @@ sitemapIgnore: true
     <url>
       <loc>https://www.behoofstudio.co.uk{{ item.url }}</loc>
       <lastmod>{{ item.date }}</lastmod>
+    </url>
+  {% endif %}
+{% endfor %}
+{%- for item in posts %}
+  {%- if item.data.sitemapIgnore !== true %}
+    <url>
+      <loc>https://www.behoofstudio.co.uk/{{ item.slug.current }}</loc>
+      <lastmod>{{ item.publishedAt }}</lastmod>
     </url>
   {% endif %}
 {% endfor %}
