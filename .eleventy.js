@@ -1,9 +1,32 @@
+require('dotenv').config();
+
 const blocksToHtml = require('@sanity/block-content-to-html');
 const sanityClient = require('./source/utils/sanityClient');
 const imageUrlBuilder = require('@sanity/image-url');
 
+// Rendering custom marks in HTML from Sanity https://github.com/sanity-io/block-content-to-html
+const h = blocksToHtml.h;
+
+const serializers = {
+    types: {
+        image: props => (
+            // console.log(props.children)
+            // h('figure', { className: "bh__image-container" },
+            //     h('img', { src: props.node.asset, alt: props.node.alt }, 'figcaption', { innerHTML: "Alt text" })
+            // )
+            h('figure', { className: "bh__image-container" },
+                h('img', { src: "source.jpg", alt: "Alt text" }),
+                h('figcaption', { innerHTML: "Alt text" })
+            )
+        )
+    }
+}
+
 // Get a pre-configured url-builder from your sanity client
 const builder = imageUrlBuilder(sanityClient);
+
+// Sanity Project ID 
+const projectId = process.env.SANITY_PROJECT
 
 // Then we like to make a simple function like this that gives the
 // builder an image and returns the builder for you to specify additional
@@ -31,6 +54,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('sanityToHTML', function (value) {
         return blocksToHtml({
             blocks: value,
+            // serializers: serializers,
+            imageOptions: { w: 1000, auto: 'format', q: 80 },
+            projectId: projectId,
+            dataset: 'production'
         })
     });
 
