@@ -16,7 +16,7 @@
         </p>
       </div>
       <div>
-        <img class="case-study__cover" data-src="{{ post.mainImage.asset.url }}" alt="{{ post.mainImage.alt }}" uk-img />
+        <img class="case-study__cover" data-src="{{ post.mainImage.asset.url | urlForCoverImg }}" alt="{{ post.mainImage.alt }}" uk-img />
       </div>
     </div>
   </div>
