@@ -69,16 +69,6 @@ module.exports = function (eleventyConfig) {
         return urlFor(sourceUrl).width(width).auto('format').url();
     });
 
-    // Sanity Image URL Builder filter for wide cards
-    eleventyConfig.addFilter("urlForWideCard", function (sourceUrl) {
-        return urlFor(sourceUrl).width(650).auto('format').url();
-    });
-
-    // Sanity Image URL Builder filter for case study cover images
-    eleventyConfig.addFilter("urlForCoverImg", function (sourceUrl) {
-        return urlFor(sourceUrl).width(900).auto('format').url();
-    });
-
     // Sanity Image URL Builder filter for LQIP images
     eleventyConfig.addFilter("lqip", function (imageAsset) {
         return getImageAsset(imageAsset).metadata.lqip;

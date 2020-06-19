@@ -9,14 +9,15 @@
         <h2 class="hero__title--about">
           {{ post.title }}
         </h2>
-        <img class="bh__watercolor-accent" data-src="/assets/images/watercolor_26.png" alt="Abstract watercolor brush accent"
-          uk-img />
+        <img class="bh__watercolor-accent" data-src="/assets/images/watercolor_26.png" alt="Abstract watercolor brush accent" uk-img />
         <p class="hero__subtitle">
           {{ post.excerpt }}
         </p>
       </div>
       <div>
-        <img class="case-study__cover" data-src="{{ post.mainImage.asset.url | urlForCoverImg }}" alt="{{ post.mainImage.alt }}" uk-img />
+        <img class="case-study__cover" src="{{ post.mainImage.asset | lqip }}" 
+                data-src="{{ post.mainImage.asset.url | urlForCard(900) }}"
+                width="850" height="550" alt="{{ post.mainImage.alt }}" uk-img/>
       </div>
     </div>
   </div>
