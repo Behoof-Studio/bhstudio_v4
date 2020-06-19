@@ -22,6 +22,7 @@
     "dotenv": "^8.2.0"
   },
   "dependencies": {
+    "@sanity/asset-utils": "^1.0.0",
     "@sanity/block-content-to-html": "^1.3.8",
     "@sanity/client": "^1.149.16",
     "@sanity/image-url": "^0.140.19"

@@ -6,7 +6,7 @@ module.exports = async function () {
       title,
       excerpt,
       author->{name, slug {current}, image{asset->{path, url}}},
-      mainImage{alt, asset->{path,url}},
+      mainImage{alt, asset->{metadata,path,url}},
       caseStudyUrl,
       categories[]->{title, description},
       slug {current},

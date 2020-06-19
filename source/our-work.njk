@@ -13,9 +13,10 @@ pagination:
 <div class="uk-section uk-section-default uk-padding-remove-bottom">
   <div class="uk-container">
     <div class="uk-card uk-card-default portfolio__main-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container">
-        <img src="{{ first_post.mainImage.asset.url | urlForWideCard }}" alt="{{ first_post.mainImage.alt }}" uk-cover>
-        <canvas width="600" height="400"></canvas>
+      <div class="uk-card-media-left bh-card__img-container--wide">
+        <img src="{{ first_post.mainImage.asset | lqip }}" 
+                data-src="{{ first_post.mainImage.asset.url | urlForCard(600) }}"
+                width="600" height="400" alt="{{ first_post.mainImage.alt }}" uk-img/>
       </div>
       <div class="uk-flex uk-flex-column uk-flex-between">
         <div class="uk-card-body">

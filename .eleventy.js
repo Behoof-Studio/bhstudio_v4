@@ -3,6 +3,7 @@ require('dotenv').config();
 const blocksToHtml = require('@sanity/block-content-to-html');
 const sanityClient = require('./source/utils/sanityClient');
 const imageUrlBuilder = require('@sanity/image-url');
+const { getImageAsset } = require('@sanity/asset-utils');
 
 // Sanity Project ID 
 const projectId = process.env.SANITY_PROJECT
@@ -64,8 +65,8 @@ module.exports = function (eleventyConfig) {
     });
 
     // Sanity Image URL Builder filter for normal cards https://www.sanity.io/docs/presenting-images
-    eleventyConfig.addFilter("urlForCard", function (sourceUrl) {
-        return urlFor(sourceUrl).width(600).auto('format').url();
+    eleventyConfig.addFilter("urlForCard", function (sourceUrl, width) {
+        return urlFor(sourceUrl).width(width).auto('format').url();
     });
 
     // Sanity Image URL Builder filter for wide cards
@@ -76,6 +77,11 @@ module.exports = function (eleventyConfig) {
     // Sanity Image URL Builder filter for case study cover images
     eleventyConfig.addFilter("urlForCoverImg", function (sourceUrl) {
         return urlFor(sourceUrl).width(900).auto('format').url();
+    });
+
+    // Sanity Image URL Builder filter for LQIP images
+    eleventyConfig.addFilter("lqip", function (imageAsset) {
+        return getImageAsset(imageAsset).metadata.lqip;
     });
 
 

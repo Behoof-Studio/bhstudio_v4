@@ -1,7 +1,9 @@
 <div>
     <div class="uk-card uk-card-default posts-grid__card">
         <div class="uk-card-media-top">
-            <img src="{{ post.mainImage.asset.url | urlForCard }}" alt="{{ post.mainImage.alt }}" />
+            <img src="{{ post.mainImage.asset | lqip }}" 
+                data-src="{{ post.mainImage.asset.url | urlForCard(600) }}"
+                width="600" height="500" alt="{{ post.mainImage.alt }}" uk-img/>
         </div>
         <div class="uk-card-body">
             <h3 class="card__title uk-card-title">
